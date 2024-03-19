@@ -14,7 +14,7 @@ public class GameInput : MonoBehaviour
     }
     public Vector3 GetMousePosition()
     {
-        Vector3 mousePos = Mouse.current.position.ReadDefaultValue();
+        Vector3 mousePos = Mouse.current.position.ReadValue(); //чтобы работала механника осмотра мышкой, нужно было убрать из ReadDefaultValue слово Default
         return mousePos;
     }
     public Vector2 GetMovementVector()
