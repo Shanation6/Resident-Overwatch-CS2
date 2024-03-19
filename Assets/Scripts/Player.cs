@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     private void HandleMovement()
     {
         Vector2 inputVector = GameInput.Instance.GetMovementVector(); // получает вектор из gameinput
-        inputVector = inputVector.normalized; // Система передвижения
         rb.MovePosition(rb.position + inputVector * (_movingSpeed + Time.deltaTime)); // расчёт новой позиции игрока
         if (Mathf.Abs(inputVector.x) > minMovement || Mathf.Abs(inputVector.y) > minMovement)
         {
